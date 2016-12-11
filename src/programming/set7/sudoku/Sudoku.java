@@ -1,6 +1,5 @@
 package programming.set7.sudoku;
 
-import java.util.HashSet;
 import java.util.Set;
 
 public class Sudoku extends NumberBoard {
@@ -74,9 +73,9 @@ public class Sudoku extends NumberBoard {
     public boolean isValid() {
         // check rows and columns
         for (int i = 0; i < Sudoku.FIELDS; i++) {
-            Set<Integer> rowValues = new HashSet<>();
-            Set<Integer> colValues = new HashSet<>();
-            Set<Integer> squareValues = new HashSet<>();
+            Set<Integer> rowValues = new SudokuSet<>();
+            Set<Integer> colValues = new SudokuSet<>();
+            Set<Integer> squareValues = new SudokuSet<>();
             for (int j = 0; j < Sudoku.FIELDS; j++) {
                 if (!rowValues.add(this.getValueAt(i, j)) ||
                         !colValues.add(this.getValueAt(j, i)) ||
