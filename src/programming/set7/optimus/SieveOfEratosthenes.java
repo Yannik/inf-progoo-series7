@@ -30,6 +30,9 @@ public class SieveOfEratosthenes extends ConsoleProgram {
         // as size includes the 0, increment it by one
         size++;
 
+        // all primes are `false` by default.
+        // as we are eliminating primes, we are setting this to true, if a number is not a prime.
+        // so, a number is a prime if it is still `false` after running the sieve.
         boolean[] primes = new boolean[size];
 
         int currentInt = 2;
